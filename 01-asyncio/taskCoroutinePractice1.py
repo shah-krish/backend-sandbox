@@ -35,7 +35,7 @@ print(f"{t2-t1:.2f} s")
 
 t3 = time.perf_counter()
 concurrent_results = asyncio.run(main2())
-print(results)
+print(concurrent_results)
 t4 = time.perf_counter()
 print(f"{t4-t3:.2f} s")
 
