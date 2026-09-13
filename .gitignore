@@ -1,3 +1,19 @@
+# Environments
+.env
 .venv/
+venv/
+env/
+
+# PyCharm / IDEs
 .idea/
+.vscode/
+
+# Python compiled files
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# OS generated files
+.DS_Store
+Thumbs.db
