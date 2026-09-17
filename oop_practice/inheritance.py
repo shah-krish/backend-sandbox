@@ -21,3 +21,24 @@ print(tesla.brand)
 honda = GasVehicle("honda", "2025", "50L")
 print(honda.capacity)
 
+#Composition (Has-A) example
+class Engine:
+    def __init__(self, horsepower: int):
+        self.horsepower = horsepower
+
+    def start(self) -> None:
+        print(f"Engine ({self.horsepower} HP) starting.")
+
+class Car:
+    def __init__(self, make: str, engine: Engine):
+        self.make = make
+        self.engine = engine  # Car HAS an Engine
+
+    def drive(self) -> None:
+        print(f"Starting {self.make}:")
+        self.engine.start()
+
+v8 = Engine(450)
+mustang = Car("Ford Mustang", v8)
+mustang.drive()
+
