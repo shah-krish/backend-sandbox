@@ -19,7 +19,6 @@ class Dog:
             raise ValueError("ID can't be negative")
         self.__id = num
 
-
 shiro = Dog('shiro', 'golden', 1)
 print(shiro.bark())
 print(shiro.trait)
