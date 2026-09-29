@@ -31,9 +31,8 @@ class blogPost(BaseModel):
     author_id: str | int
 
     # status can only be one of these 3 strings
-    status = Literal["archived", "draft", "published"] = "draft"
+    status = Literal["archived", "draft", "published"]
 
     # regular expression
     slug: Annotated[str, Field(pattern=r"^[a-z0-9]$")]
-
-
+    
