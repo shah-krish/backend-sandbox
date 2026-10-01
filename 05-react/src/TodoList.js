@@ -1,9 +1,11 @@
 import React from 'react'
+import Todo from './Todo'
 
-export default function TodoList() {
+export default function TodoList({todos}) {
   return (
-    <div>
-      Hello World
-    </div>
+    todos.map(todo => {
+    // Key makes sure that only the changed element is re-rendered and not the whole list
+        return <Todo key={todo.id} todo = {todo} />
+    })
   )
 }
